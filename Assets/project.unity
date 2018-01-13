@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 104466866}
   - component: {fileID: 104466865}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,9 +141,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counter: 0
-  obstacle: {fileID: 1547536408218766, guid: b7f678164ea8d4dfe85686470d2b50d8, type: 2}
   x: 0
-  cam: {fileID: 0}
+  cam: {fileID: 669943936}
+  player: {fileID: 0}
+  rain: {fileID: 1655243047741652, guid: 6c643690151838c4f906132be51a6b1b, type: 2}
+  bug: {fileID: 1999383942855732, guid: 8b5bab482c64b984eb640fd662f3d243, type: 2}
+  bird: {fileID: 1401113685626870, guid: 5803124c957ebac42ab78121cab192bc, type: 2}
+  kite: {fileID: 1401113685626870, guid: e5c245aeca40ed945aae26d69440f4a6, type: 2}
+  human: {fileID: 1401113685626870, guid: 30427120434765e4fa2c23285bbaea12, type: 2}
+  shark: {fileID: 1401113685626870, guid: 5431bd77197b4474798952d9e132bf94, type: 2}
+  plane: {fileID: 1401113685626870, guid: b9d6b93d54a82ef41bce65cbb43b9810, type: 2}
+  whale: {fileID: 1401113685626870, guid: 76351319385893f4089c4919789335fa, type: 2}
 --- !u!4 &104466866
 Transform:
   m_ObjectHideFlags: 0
