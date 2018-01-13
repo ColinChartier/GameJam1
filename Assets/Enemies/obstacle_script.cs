@@ -17,7 +17,7 @@ public class obstacle_script : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         pos.Translate(new Vector3(0f, 0.1f));
-        if (pos.position.y >= 2*cam.orthographicSize) {
+        if (pos.position.y >= 1.2 * cam.orthographicSize + 3) {
             Destroy(this.gameObject);
         }
     }
