@@ -7,6 +7,7 @@ public class CloudSpawner : MonoBehaviour
     public int counter = 0;
     public GameObject cloud;
     public int x = 0;
+    float nextSpawn = 0;
 
     // Use this for initialization
     void Start()
@@ -17,10 +18,11 @@ public class CloudSpawner : MonoBehaviour
     void Update()
     {
         counter++;
-        if (counter == 120)
+        if (counter >= nextSpawn)
         {
             counter = 0;
-            Instantiate(cloud, new Vector3(-5, 0), new Quaternion(0, 0, 90, 0));
+            nextSpawn = Random.Range(70, 400);
+            Instantiate(cloud, new Vector3(-5, Random.Range(-5, 5)), new Quaternion(0, 0, 90, 0));
             x++;
         }
     }
