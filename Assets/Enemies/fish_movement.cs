@@ -13,14 +13,14 @@ public class fish_movement : obstacle_script {
     void Start() {
         pos = GetComponent<Transform>();
         render = GetComponent<Renderer>();
-        yspeed = Random.value * (cam.orthographicSize / 2) + (cam.orthographicSize / 10);
+        yspeed = Random.value * (cam.orthographicSize / 2) + (cam.orthographicSize / 50);
         start_x = Random.value * (cam.orthographicSize * 16f / 10f);
         float dircheck = Random.value;
         if (dircheck <= 0.5) {
-            xspeed = 1.5f * cam.orthographicSize / 30f;
+            xspeed = 2f * cam.orthographicSize / 20f;
             start_x *= -1;
         } else {
-            xspeed = -1.5f * cam.orthographicSize / 30f;
+            xspeed = -2f * cam.orthographicSize / 20f;
         }
         pos.SetPositionAndRotation(new Vector3(start_x, cam.orthographicSize * -1, 0), new Quaternion());
     }
@@ -32,6 +32,6 @@ public class fish_movement : obstacle_script {
         }
 
         pos.SetPositionAndRotation(new Vector3(pos.position.x + xspeed, pos.position.y + yspeed), new Quaternion());
-        yspeed -= 0.1f * cam.orthographicSize / 3f;
+        yspeed -= 0.1f * cam.orthographicSize / 10f;
 	}
 }
