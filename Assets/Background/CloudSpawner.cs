@@ -27,7 +27,7 @@ public class CloudSpawner : MonoBehaviour
     {
         counter++;
         totalCounter++;
-        if (counter >= nextSpawn && totalCounter < 3500)
+        if (counter >= nextSpawn)
         {
             counter = 0;
             nextSpawn = Random.Range(70, 400);
