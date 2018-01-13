@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class fish_movement : MonoBehaviour {
+public class fish_movement : obstacle_script {
 
-    public Camera cam;
     private float yspeed;
     private float xspeed;
     private float start_x;
-    public Transform pos;
     private Renderer render;
 
     // Use this for initialization
