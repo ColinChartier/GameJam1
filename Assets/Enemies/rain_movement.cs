@@ -12,9 +12,9 @@ public class rain_movement : obstacle_script {
     void Start () {
         pos = GetComponent<Transform>();
         render = GetComponent<Renderer>();
-        yspeed = Random.value * (cam.orthographicSize / 2) + (cam.orthographicSize / 10);
+        yspeed = 0.1f;
         start_x = Random.value * (cam.orthographicSize * 16f / 10f);
-        pos.SetPositionAndRotation(new Vector3(start_x, cam.orthographicSize * -1, 0), new Quaternion());
+        pos.SetPositionAndRotation(new Vector3(start_x, cam.orthographicSize * -1f , 0), new Quaternion());
     }
 	
 	// Update is called once per frame
