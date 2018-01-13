@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RainMovement : MonoBehaviour {
 
@@ -9,14 +10,17 @@ public class RainMovement : MonoBehaviour {
     public Transform pos;
 	public Camera cam;
     public float aspect_ratio;
+    public Text countText;
 
 	// Use this for initialization
 	void Start () {
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        //pos = this.GetComponent<Transform>();
+        score = 0;
+        SetCountText();
+    }
+
+    // Update is called once per frame
+    void Update () {
         // Get keys
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
@@ -43,5 +47,13 @@ public class RainMovement : MonoBehaviour {
         speed += delta / 32f;
         cam.orthographicSize += delta;
         pos.localScale += new Vector3(delta,delta,0);
+        SetCountText();
+
+    }
+
+    void SetCountText () //function that updates the count
+   {
+        countText.text = "Score: " + score.ToString();
+
     }
 }
