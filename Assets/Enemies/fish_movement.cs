@@ -19,10 +19,10 @@ public class fish_movement : MonoBehaviour {
         start_x = Random.value * (cam.orthographicSize * 16f / 10f);
         float dircheck = Random.value;
         if (dircheck <= 0.5) {
-            xspeed = 10 * cam.orthographicSize / 3f;
+            xspeed = 1.5f * cam.orthographicSize / 30f;
             start_x *= -1;
         } else {
-            xspeed = -10 * cam.orthographicSize / 3f;
+            xspeed = -1.5f * cam.orthographicSize / 30f;
         }
         pos.SetPositionAndRotation(new Vector3(start_x, cam.orthographicSize * -1, 0), new Quaternion());
     }
@@ -34,6 +34,6 @@ public class fish_movement : MonoBehaviour {
         }
 
         pos.SetPositionAndRotation(new Vector3(pos.position.x + xspeed, pos.position.y + yspeed), new Quaternion());
-        yspeed -= 2.0f * cam.orthographicSize / 3f;
+        yspeed -= 0.1f * cam.orthographicSize / 3f;
 	}
 }
