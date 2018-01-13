@@ -21,7 +21,7 @@ public class obstacle_script : MonoBehaviour {
         }
         // Debug.Log("Player has hit obstacle");
         RainMovement scr = collision.gameObject.GetComponent<RainMovement>();
-        if (scr.score > size) {
+        if (scr.score >= size) {
             Debug.Log("Player should absorb obstacle.");
             scr.UpdateScore(value);
             Destroy(this.gameObject);
