@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4156557961884762}
   - component: {fileID: 212206725613283032}
-  - component: {fileID: 114130346347718856}
   - component: {fileID: 58453126933212926}
+  - component: {fileID: 114063492766737966}
   m_Layer: 0
   m_Name: enemy_rain
   m_TagString: Untagged
@@ -57,7 +57,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 7.5
---- !u!114 &114130346347718856
+--- !u!114 &114063492766737966
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1655243047741652}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8828ad6f20a8349548f8c0db7911b283, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f81c2045e86d4f4ab21bf1cc0ee8a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   size: 0

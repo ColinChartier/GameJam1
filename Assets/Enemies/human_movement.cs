@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class kite_movement : obstacle_script {
+public class human_movement : obstacle_script {
 
     private float yspeed;
     private float start_x;
@@ -12,9 +12,9 @@ public class kite_movement : obstacle_script {
     void Start () {
         pos = GetComponent<Transform>();
         render = GetComponent<Renderer>();
-        yspeed = Random.value * (cam.orthographicSize / 120f);
+        yspeed = -Random.value * (cam.orthographicSize / 60f);
         start_x = Random.value * (cam.orthographicSize * 16f / 10f);
-        pos.SetPositionAndRotation(new Vector3(start_x, cam.orthographicSize * -1, 0), new Quaternion());
+        pos.SetPositionAndRotation(new Vector3(start_x, cam.orthographicSize, 0), new Quaternion());
     }
 	
 	// Update is called once per frame
