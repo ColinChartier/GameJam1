@@ -5,25 +5,34 @@ using UnityEngine;
 public class CloudSpawner : MonoBehaviour
 {
     public int counter = 0;
+    int totalCounter = 0;
     public GameObject cloud;
-    public int x = 0;
+    public Sprite[] sprites;
     float nextSpawn = 0;
 
     // Use this for initialization
     void Start()
     {
+        
+    }
+
+    Sprite getCloudSprite()
+    {
+        int rand = Random.Range(0, sprites.Length);
+        return sprites[rand];
     }
 
     // Update is called once per frame
     void Update()
     {
         counter++;
-        if (counter >= nextSpawn)
+        totalCounter++;
+        if (counter >= nextSpawn && totalCounter < 3500)
         {
             counter = 0;
             nextSpawn = Random.Range(70, 400);
-            Instantiate(cloud, new Vector3(-5, Random.Range(-5, 5)), new Quaternion(0, 0, 90, 0));
-            x++;
+            GameObject cloudInstance = Instantiate(cloud, new Vector3(-5, Random.Range(-5, 5)), new Quaternion(0, 0, 0, 0));
+            cloud.GetComponent<SpriteRenderer>().sprite = getCloudSprite();
         }
     }
 }

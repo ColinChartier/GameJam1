@@ -12,6 +12,7 @@ public class RainMovement : MonoBehaviour {
 	public Camera cam;
     public float aspect_ratio;
     public Text countText;
+    public GameObject shark;
 
 	// Use this for initialization
 	void Start () {
@@ -41,6 +42,11 @@ public class RainMovement : MonoBehaviour {
         }
         if (pos.position.y <= cam.orthographicSize * -1) { // Neg Y
             pos.SetPositionAndRotation(new Vector3(pos.position.x, cam.orthographicSize * -1, pos.position.z), new Quaternion());
+        }
+
+        if (Input.GetKey(KeyCode.Z))
+        {
+            Instantiate(shark).GetComponent<fish_movement>().cam = cam;
         }
     }
 
