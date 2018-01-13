@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   counter: 0
   cam: {fileID: 669943936}
-  player: {fileID: 1413390552}
+  player: {fileID: 2074489334}
   rain: {fileID: 1655243047741652, guid: 6c643690151838c4f906132be51a6b1b, type: 2}
   bug: {fileID: 1999383942855732, guid: 8b5bab482c64b984eb640fd662f3d243, type: 2}
   bird: {fileID: 1401113685626870, guid: 5803124c957ebac42ab78121cab192bc, type: 2}
@@ -224,7 +224,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &382285402
 GameObject:
@@ -422,13 +422,54 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1413390552 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1899371416935512, guid: d2474135ed2992a4fb8a6a67d5e00859,
-    type: 2}
-  m_PrefabInternal: {fileID: 2036879640}
+--- !u!1001 &717199394
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 465656, guid: b046278bb9b6e104790392b566667ba5, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465656, guid: b046278bb9b6e104790392b566667ba5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465656, guid: b046278bb9b6e104790392b566667ba5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465656, guid: b046278bb9b6e104790392b566667ba5, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465656, guid: b046278bb9b6e104790392b566667ba5, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465656, guid: b046278bb9b6e104790392b566667ba5, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 465656, guid: b046278bb9b6e104790392b566667ba5, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 465656, guid: b046278bb9b6e104790392b566667ba5, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475408, guid: b046278bb9b6e104790392b566667ba5, type: 2}
+      propertyPath: RainIntensity
+      value: 0.52
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b046278bb9b6e104790392b566667ba5, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1577291175
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +601,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4503972172112568, guid: d2474135ed2992a4fb8a6a67d5e00859, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114537416081671534, guid: d2474135ed2992a4fb8a6a67d5e00859,
         type: 2}
@@ -575,3 +616,8 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d2474135ed2992a4fb8a6a67d5e00859, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2074489334 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1899371416935512, guid: d2474135ed2992a4fb8a6a67d5e00859,
+    type: 2}
+  m_PrefabInternal: {fileID: 2036879640}

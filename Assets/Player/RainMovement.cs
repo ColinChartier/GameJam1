@@ -46,7 +46,7 @@ public class RainMovement : MonoBehaviour {
         score += delta;
         speed += delta / 32f;
         cam.orthographicSize += delta;
-        pos.localScale += new Vector3(delta,delta,0);
+        pos.localScale += new Vector3(0.05f*delta,0.05f*delta,0);
         SetCountText();
 
     }
