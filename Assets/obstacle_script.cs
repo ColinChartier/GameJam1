@@ -23,11 +23,11 @@ public class obstacle_script : MonoBehaviour {
         RainMovement scr = collision.gameObject.GetComponent<RainMovement>();
         if (scr.score > size) {
             Debug.Log("Player should absorb obstacle.");
-            scr.score += value;
+            scr.UpdateScore(value);
             Destroy(this.gameObject);
         } else {
             Debug.Log("Player should be damaged by obstacle.");
-            scr.score -= 1;
+            scr.UpdateScore(-1);
         }
     }
 }

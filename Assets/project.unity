@@ -247,6 +247,7 @@ MonoBehaviour:
   speed: 0.3
   score: 5
   pos: {fileID: 618079097}
+  cam: {fileID: 669943936}
 --- !u!61 &618079099
 BoxCollider2D:
   m_ObjectHideFlags: 0
