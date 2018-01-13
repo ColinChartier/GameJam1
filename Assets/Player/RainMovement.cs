@@ -13,6 +13,7 @@ public class RainMovement : MonoBehaviour {
     public float aspect_ratio;
     public Text countText;
     public GameObject shark;
+    public GameObject rain;
 
 	// Use this for initialization
 	void Start () {
@@ -48,6 +49,10 @@ public class RainMovement : MonoBehaviour {
         {
             Instantiate(shark).GetComponent<fish_movement>().cam = cam;
         }
+        if (Input.GetKey(KeyCode.X))
+        {
+            Instantiate(rain).GetComponent<rain_movement>().cam = cam;
+        }
     }
 
     public void UpdateScore (int delta) {
@@ -56,7 +61,7 @@ public class RainMovement : MonoBehaviour {
             score = min_score;
             return;
         }
-        speed += delta / 32f;
+        speed += delta / 60f;
         cam.orthographicSize += 0.1f*delta;
         pos.localScale += new Vector3(0.0005f*delta,0.0005f*delta,0);
         SetCountText();
