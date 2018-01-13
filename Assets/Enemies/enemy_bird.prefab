@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212240276705069204}
   - component: {fileID: 114774193862115600}
   - component: {fileID: 60848280914225720}
+  - component: {fileID: 58493818895891352}
   m_Layer: 0
   m_Name: enemy_bird
   m_TagString: Untagged
@@ -37,18 +38,33 @@ Transform:
   m_GameObject: {fileID: 1401113685626870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58493818895891352
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1401113685626870}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 7.5
 --- !u!60 &60848280914225720
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1401113685626870}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -83,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50fa974a44b24f17aaba385a5cb674a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 0
+  size: 25
   value: 8
   pos: {fileID: 0}
   cam: {fileID: 0}

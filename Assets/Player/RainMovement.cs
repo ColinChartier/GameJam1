@@ -51,15 +51,15 @@ public class RainMovement : MonoBehaviour {
     public void UpdateScore (int delta) {
         score += delta;
         speed += delta / 32f;
-        cam.orthographicSize += delta;
-        pos.localScale += new Vector3(0.05f*delta,0.05f*delta,0);
+        cam.orthographicSize += 0.1f*delta;
+        pos.localScale += new Vector3(0.0005f*delta,0.0005f*delta,0);
         SetCountText();
 
     }
 
     void SetCountText () //function that updates the count
    {
-        countText.text = "Score: " + score.ToString();
+        countText.text = "Size: " + score.ToString();
 
     }
 }
