@@ -6,13 +6,20 @@ public class obstacle_script : MonoBehaviour {
     bool attached = false;
     public int size = 10;
     public int value = 0;
+    private Transform pos;
+    public Camera cam;
 
     // Use this for initialization
     void Start () {
+        pos = GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update () {
+        pos.Translate(new Vector3(0f, 0.1f));
+        if (pos.position.y >= 2*cam.orthographicSize) {
+            Destroy(this.gameObject);
+        }
     }
 
     void OnTriggerEnter2D (Collider2D collision) {

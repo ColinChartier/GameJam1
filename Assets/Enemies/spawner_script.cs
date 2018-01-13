@@ -6,6 +6,7 @@ public class spawner_script : MonoBehaviour {
     public int counter = 0;
     public GameObject obstacle;
     public int x = 0;
+    public Camera cam;
 
     // Use this for initialization
     void Start () {
@@ -16,7 +17,7 @@ public class spawner_script : MonoBehaviour {
         counter++;
         if (counter == 120) {
             counter = 0;
-            Instantiate(obstacle, new Vector3(x, 0), new Quaternion());
+            Instantiate(obstacle, new Vector3(x, 0), new Quaternion()).GetComponent<obstacle_script>().cam = cam;
             x++;
         }
     }
