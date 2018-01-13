@@ -15,15 +15,19 @@ public class obstacle_script : MonoBehaviour {
     void Update () {
     }
 
-    void OnCollisionEnter2D (Collision2D collision) {
-        if (collision.gameObject.name != "Raindrop") {
+    void OnTriggerEnter2D (Collider2D collision) {
+        if (collision.gameObject.name != "Rain drop") {
             return;
         }
-        Debug.Log("Player has hit obstacle");
-        //if (collision.gameObject.score > size) {
+        // Debug.Log("Player has hit obstacle");
+        RainMovement scr = collision.gameObject.GetComponent<RainMovement>();
+        if (scr.score > size) {
             Debug.Log("Player should absorb obstacle.");
-        //} else {
+            scr.score += value;
+            Destroy(this.gameObject);
+        } else {
             Debug.Log("Player should be damaged by obstacle.");
-        //}
+            scr.score -= 1;
+        }
     }
 }
