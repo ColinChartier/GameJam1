@@ -7,7 +7,7 @@ public class RainMovement : MonoBehaviour {
 
     public float speed = 0.13f;
     public int score;
-    public int max_score;
+    public int min_score;
     public Transform pos;
 	public Camera cam;
     public float aspect_ratio;
@@ -18,7 +18,7 @@ public class RainMovement : MonoBehaviour {
 	void Start () {
         //pos = this.GetComponent<Transform>();
         score = 0;
-        max_score = 0;
+        min_score = 0;
         SetCountText();
     }
 
@@ -52,13 +52,14 @@ public class RainMovement : MonoBehaviour {
 
     public void UpdateScore (int delta) {
         score += delta;
+        if (score < min_score) {
+            score = min_score;
+            return;
+        }
         speed += delta / 32f;
         cam.orthographicSize += 0.1f*delta;
         pos.localScale += new Vector3(0.0005f*delta,0.0005f*delta,0);
         SetCountText();
-        if (score >= max_score) {
-            max_score = score;
-        }
     }
 
     void SetCountText () //function that updates the count

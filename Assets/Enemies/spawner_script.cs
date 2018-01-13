@@ -69,16 +69,24 @@ public class spawner_script : MonoBehaviour {
             next1 = next2;
             if (next1 == bird) {
                 next2 = kite;
+                player.GetComponent<RainMovement>().min_score = 7;
             } else if (next1 == kite) {
                 next2 = human;
+                player.GetComponent<RainMovement>().min_score = 25;
             } else if (next1 == human) {
                 next2 = shark;
+                player.GetComponent<RainMovement>().min_score = 80;
             } else if (next1 == shark) {
                 next2 = plane;
+                player.GetComponent<RainMovement>().min_score = 250;
             } else if (next1 == plane) {
                 next2 = whale;
+                player.GetComponent<RainMovement>().min_score = 2000;
             } else if (next1 == whale) {
                 next2 = null;
+                player.GetComponent<RainMovement>().min_score = 40000;
+            } else if (next1 == null) {
+                player.GetComponent<RainMovement>().min_score = 500000;
             }
         }
     }
