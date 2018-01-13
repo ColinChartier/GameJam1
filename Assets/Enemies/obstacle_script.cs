@@ -6,7 +6,7 @@ public class obstacle_script : MonoBehaviour {
     bool attached = false;
     public int size = 10;
     public int value = 0;
-    private Transform pos;
+    public Transform pos;
     public Camera cam;
 
     // Use this for initialization
