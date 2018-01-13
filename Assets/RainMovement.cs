@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RainMovement : MonoBehaviour {
 
-    public float speed = 3;
+    public float speed = 0.13f;
     public int score;
     public Transform pos;
 
